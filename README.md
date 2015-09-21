@@ -24,6 +24,11 @@ The server does NOT send any email including bounces. This should
 be performed by a separate program.
 
 
+### Self signed certificates
+````mkdir keys
+````openssl req -new -nodes -keyout keys/mail_server.key -out keys/mail_server.csr
+````openssl x509 -req -days 365 -in keys/mail_server.csr -signkey keys/mail_server.key -out keys/mail_server.crt
+
 ### History and purpose
 
 GoGuerrilla is a port of the original 'Guerrilla' SMTP daemon written in PHP using
