@@ -25,9 +25,7 @@ be performed by a separate program.
 
 
 ### Self signed certificates
-````mkdir keys
-````openssl req -new -nodes -keyout keys/mail_server.key -out keys/mail_server.csr
-````openssl x509 -req -days 365 -in keys/mail_server.csr -signkey keys/mail_server.key -out keys/mail_server.crt
+````mkdir keys ````openssl req -new -nodes -keyout keys/mail_server.key -out keys/mail_server.csr ````openssl x509 -req -days 365 -in keys/mail_server.csr -signkey keys/mail_server.key -out keys/mail_server.crt
 
 ### History and purpose
 
